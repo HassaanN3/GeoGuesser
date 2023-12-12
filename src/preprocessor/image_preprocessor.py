@@ -12,7 +12,7 @@ def preprocess_images(metadata_file, output_shape, grid_size, test_size=0.15, va
         metadata_json = json.load(f)
 
     metadata = metadata_json['metadata']
-    image_dir = '../../data/scraped_images'
+    image_dir = 'GeoGuesser/data/scraped_images'
 
     # Load images and labels
     images = []

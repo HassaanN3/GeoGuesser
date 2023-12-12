@@ -2,7 +2,7 @@ import os
 import json
 import shutil
 
-metadata_file = '../../data/scraped_images/metadata.json'
+metadata_file = 'GeoGuesser/data/scraped_images/metadata.json'
 
 def update_metadata_and_filenames():
     '''
@@ -24,12 +24,12 @@ def update_metadata_and_filenames():
     # Iterate through the metadata and check if the image files exist
     for metadata in metadata_json['metadata']:
         old_filename = metadata['filename']
-        old_filepath = f'../../data/scraped_images/{old_filename}'
+        old_filepath = f'GeoGuesser/data/scraped_images/{old_filename}'
 
         if os.path.isfile(old_filepath):
             new_counter += 1
             new_filename = f'{new_counter}.png'
-            new_filepath = f'../../data/scraped_images/{new_filename}'
+            new_filepath = f'GeoGuesser/data/scraped_images/{new_filename}'
             shutil.move(old_filepath, new_filepath)
             metadata['filename'] = new_filename
             new_metadata_list.append(metadata)
