@@ -114,7 +114,7 @@ def scrape_grid(image_shape, grid_row, grid_col, grid_size, images_per_grid, gri
 
 
 
-metadata_file = 'content/GeoGuesser/data/scraped_images/metadata.json'
+metadata_file = '/content/GeoGuesser/data/scraped_images/metadata.json'
 
 def scraper(grid_size, images_per_grid, image_shape, keep_current_images=True, bounding_box=None, location_name=None, timeout_minutes=30):
     global counter
