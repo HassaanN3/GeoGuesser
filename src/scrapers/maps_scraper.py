@@ -9,11 +9,10 @@ import threading
 import pathlib
 import time
 
-PATH_FROM_SCRAPER = "GeoGuesser/data//scraped_images"
-PATH_FROM_ROOT = "GeoGuesser/data//scraped_images"
+PATH_FROM_SCRAPER = "GeoGuesser/data/scraped_images"
+PATH_FROM_ROOT = "GeoGuesser/data/scraped_images"
 
-load_dotenv()
-apiKey = os.getenv('GOOGLE_API')
+apiKey = 'AIzaSyBX9gFFC6Gr9Eh3K1SluEOD_GnZac0aUtM'
 
 # def one_hot_encoding(n, size):
 #     return [1 if i == n else 0 for i in range(size)]
