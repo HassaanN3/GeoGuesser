@@ -10,7 +10,7 @@ import pathlib
 import time
 
 PATH_FROM_SCRAPER = "../../data/scraped_images"
-PATH_FROM_ROOT = "data/scraped_images"
+PATH_FROM_ROOT = "/content/GeoGuesser/data/scraped_images"
 
 load_dotenv()
 apiKey = os.getenv('GOOGLE_API')

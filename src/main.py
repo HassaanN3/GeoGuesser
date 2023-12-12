@@ -23,7 +23,7 @@ else:
     scraper(grid_size, images_per_grid, INPUT_SHAPE, keep_current_images, location_name=location_name)
 
 # Preprocess images
-metadata_file = 'data/scraped_images/metadata.json'
+metadata_file = '../data/scraped_images/metadata.json'
 train_generator, validation_generator, test_generator, train_lat_lng_labels, validation_lat_lng_labels, test_lat_lng_labels = preprocess_images(metadata_file, OUTPUT_SHAPE, grid_size)
 
 # Train the models
@@ -63,5 +63,5 @@ print(f'Test location loss: {test_location_loss}, Metrics: {metrics}')
 print(f'Mean distance error: {mean_distance_error}, Median distance error: {median_distance_error}')
 
 # Save models
-grid_classifier.save('models/grid_classifier.h5')
-location_regressor.save('models/location_regressor.h5')
+grid_classifier.save('/content/GeoGuesser/models/grid_classifier.h5')
+location_regressor.save('/content/GeoGuesser/models/location_regressor.h5')
