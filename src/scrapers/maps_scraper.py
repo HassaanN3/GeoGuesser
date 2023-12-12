@@ -12,7 +12,8 @@ import time
 PATH_FROM_SCRAPER = "GeoGuesser/data/scraped_images"
 PATH_FROM_ROOT = "GeoGuesser/data/scraped_images"
 
-apiKey = 'AIzaSyBX9gFFC6Gr9Eh3K1SluEOD_GnZac0aUtM'
+load_dotenv()
+apiKey = os.getenv('GOOGLE_API')
 
 # def one_hot_encoding(n, size):
 #     return [1 if i == n else 0 for i in range(size)]
@@ -112,10 +113,8 @@ def scrape_grid(image_shape, grid_row, grid_col, grid_size, images_per_grid, gri
         break
 
 
-script_dir = pathlib.Path(__file__).parent.absolute()
-os.makedirs(os.path.join(script_dir, PATH_FROM_SCRAPER), exist_ok=True)
 
-metadata_file = os.path.join(script_dir, f'{PATH_FROM_SCRAPER}/metadata.json')
+metadata_file = 'content/GeoGuesser/data/scraped_images/metadata.json'
 
 def scraper(grid_size, images_per_grid, image_shape, keep_current_images=True, bounding_box=None, location_name=None, timeout_minutes=30):
     global counter
