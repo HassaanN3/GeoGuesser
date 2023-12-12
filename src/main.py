@@ -23,7 +23,7 @@ else:
     scraper(grid_size, images_per_grid, INPUT_SHAPE, keep_current_images, location_name=location_name)
 
 # Preprocess images
-metadata_file = 'data/scraped_images/metadata.json'
+metadata_file = 'GeoGuesser/data/scraped_images/metadata.json'
 train_generator, validation_generator, test_generator, train_lat_lng_labels, validation_lat_lng_labels, test_lat_lng_labels = preprocess_images(metadata_file, OUTPUT_SHAPE, grid_size)
 
 # Train the models

@@ -9,8 +9,8 @@ import threading
 import pathlib
 import time
 
-PATH_FROM_SCRAPER = "../../data/scraped_images"
-PATH_FROM_ROOT = "data/scraped_images"
+PATH_FROM_SCRAPER = "GeoGuesser/data//scraped_images"
+PATH_FROM_ROOT = "GeoGuesser/data//scraped_images"
 
 load_dotenv()
 apiKey = os.getenv('GOOGLE_API')
