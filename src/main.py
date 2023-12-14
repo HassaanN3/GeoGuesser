@@ -7,7 +7,7 @@ from models.cnn_geoguesser import train_geoguesser, create_grid_classifier, crea
 
 # Scrape images
 grid_size = 10
-images_per_grid = 3
+images_per_grid = 10
 location_name = "London"
 INPUT_SHAPE = (640, 640, 3) # Specifies the shape for images to be scraped
 OUTPUT_SHAPE = (224, 224, 3) # Specifies the shape of the input to the CNN

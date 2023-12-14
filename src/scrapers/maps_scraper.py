@@ -82,7 +82,7 @@ def save_metadata(metadata):
 # def scrape_grid(grid_row, grid_col, grid_size, images_per_grid, grid_image_counter, end_time, available_grids):
 def scrape_grid(image_shape, grid_row, grid_col, grid_size, images_per_grid, grid_image_counter, end_time):
     global counter
-    headings = ['0', '90', '180']
+    headings = ['0', '45', '90', '135', '180']
     lat_step = (lat_max - lat_min) / grid_size
     lng_step = (lng_max - lng_min) / grid_size
 
@@ -123,7 +123,7 @@ def scraper(grid_size, images_per_grid, image_shape, keep_current_images=True, b
     global lat_min, lat_max, lng_min, lng_max
 
     # Compute the maximum number of images
-    max_images = images_per_grid * grid_size * grid_size * 3
+    max_images = images_per_grid * grid_size * grid_size * 5
 
     # If metadata file exists, load it and check if the count of images reached the limit
     if os.path.isfile(metadata_file):
