@@ -84,3 +84,7 @@ def mean_haversine_distance(y_true, y_pred):
 
 def median_haversine_distance(y_true, y_pred):
     return tfp.stats.percentile(haversine_distance(y_true, y_pred), 50.0)
+
+def calculate_score(distance):
+  score = 5000*math.exp(-distance/508.7)
+  return score

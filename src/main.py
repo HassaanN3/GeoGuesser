@@ -53,14 +53,15 @@ test_grid_labels = np.argmax(test_lat_lng_labels, axis=1)
 test_grid_accuracy = np.mean(np.argmax(test_grid_predictions, axis=1) == test_grid_labels)
 
 # Calculate mean and median distance error
-from utils.geocoding import haversine_distance
+from utils.geocoding import haversine_distance, calculate_score
 distance_errors = haversine_distance(test_lat_lng_labels, test_location_predictions)
 mean_distance_error = np.mean(distance_errors)
 median_distance_error = np.median(distance_errors)
 
-print(f'Test grid classification accuracy: {test_grid_accuracy}')
+print(f'\nTest location Score: {calculate_score(mean_distance_error)}')
 print(f'Test location loss: {test_location_loss}, Metrics: {metrics}')
 print(f'Mean distance error: {mean_distance_error}, Median distance error: {median_distance_error}')
+print(f'Normalized Loss: {calculate_score(mean_distance_error)/5000}')
 
 # Save models
 grid_classifier.save('models/grid_classifier.h5')
